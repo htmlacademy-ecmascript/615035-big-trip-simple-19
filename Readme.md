@@ -1,7 +1,7 @@
 # Проект «Большое путешествие (простой)»
 
 * Студент: [Дима Oбора](https://up.htmlacademy.ru/ecmascript/19/user/615035).
-* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker).
+* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker). 
 
 ---
 
