@@ -20,7 +20,7 @@
     "eslint-config-htmlacademy": "8.0.0"
   },
   "engines": {
-    "node": "18"
+    "node": "18.12.1"
   },
   "dependencies": {
     "@babel/core": "^7.20.5",
