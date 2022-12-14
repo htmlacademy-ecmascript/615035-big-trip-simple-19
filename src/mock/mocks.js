@@ -2,7 +2,6 @@ import {getRandomArrayElement} from '../utils.js';
 
 
 const transport = ['taxi', 'bus', 'train', 'ship', 'drive', 'flight', 'check-in', 'sightseeing', 'restaurant'];
-
 const mockDestination = [
   {
     'id': 1,
@@ -49,8 +48,7 @@ const mockDestination = [
     ]
   },
 ];
-
-const mockOffer = [
+export const mockOffers = [
   {
     'id': 1,
     'title': 'Upgrade to a business class',
@@ -72,41 +70,21 @@ const mockOffer = [
     'price': 120
   },
 ];
-
-const mockOffersByType = [
-  {
-    'type': getRandomArrayElement(transport),
-    'offers': $Array<Offer>$
-  },
-  {
-    'type': getRandomArrayElement(transport),
-    'offers': $Array<Offer>$
-  },
-  {
-    'type': getRandomArrayElement(transport),
-    'offers': $Array<Offer>$
-  },
-  {
-    'type': getRandomArrayElement(transport),
-    'offers': $Array<Offer>$
-  },
-];
-
-const Point = [
+export const Point = [
   {
     'base_price': 1100,
     'date_from': '2019-07-10T22:55:56.845Z',
     'date_to': '2019-07-11T11:22:13.375Z',
-    'destination': [1,2],
+    'destination': [1],
     'id': '1',
-    'offers': [1,2],
+    'offers': [4,1],
     'type': getRandomArrayElement(transport),
   },
   {
     'base_price': 1100,
     'date_from': '2019-07-10T22:55:56.845Z',
     'date_to': '2019-07-11T11:22:13.375Z',
-    'destination': [4,3],
+    'destination': [3],
     'id': '2',
     'offers':[4,3],
     'type': getRandomArrayElement(transport),
@@ -115,7 +93,7 @@ const Point = [
     'base_price': 1100,
     'date_from': '2019-07-10T22:55:56.845Z',
     'date_to': '2019-07-11T11:22:13.375Z',
-    'destination': [1,2],
+    'destination': [2],
     'id': '3',
     'offers': [1,2],
     'type': getRandomArrayElement(transport),
@@ -124,82 +102,36 @@ const Point = [
     'base_price': 1100,
     'date_from': '2019-07-10T22:55:56.845Z',
     'date_to': '2019-07-11T11:22:13.375Z',
-    'destination': [4,3],
+    'destination': [4],
     'id': '4',
     'offers': [4,3],
     'type': getRandomArrayElement(transport),
   }
 ];
 
-const LocalPoint = [
-  {
-    'base_price': 222,
-    'date_from': '2019-07-10T22:55:56.845Z',
-    'date_to': '2019-07-11T11:22:13.375Z',
-    'destination': $Destination.id$,
-    'offers': $Array<Offer.id>$,
-    'type': getRandomArrayElement(transport),
-  },
-  {
-    'base_price': 222,
-    'date_from': '2019-07-10T22:55:56.845Z',
-    'date_to': '2019-07-11T11:22:13.375Z',
-    'destination': $Destination.id$,
-    'offers': $Array<Offer.id>$,
-    'type': getRandomArrayElement(transport),
-  },
-  {
-    'base_price': 222,
-    'date_from': '2019-07-10T22:55:56.845Z',
-    'date_to': '2019-07-11T11:22:13.375Z',
-    'destination': $Destination.id$,
-    'offers': $Array<Offer.id>$,
-    'type': getRandomArrayElement(transport),
-  },
-  {
-    'base_price': 222,
-    'date_from': '2019-07-10T22:55:56.845Z',
-    'date_to': '2019-07-11T11:22:13.375Z',
-    'destination': $Destination.id$,
-    'offers': $Array<Offer.id>$,
-    'type': getRandomArrayElement(transport),
-  }
-];
 
 const AuthorizationError = {
   'error': 401,
   'message': 'Header Authorization is not correct'
 };
-
 const NotFoundError = {
   'error': 404,
   'message': 'Not found'
 };
 
+
 function getRandomDestination() {
   return getRandomArrayElement(mockDestination);
 }
-
 function getRandomOffers() {
-  return getRandomArrayElement(mockOffer);
+  return getRandomArrayElement(mockOffers);
 }
-
-function getRandomOffersByType() {
-  return getRandomArrayElement(mockOffersByType);
-}
-
 function getRandomPoint() {
   return getRandomArrayElement(Point);
 }
-
-function getRandomLocalPoint() {
-  return getRandomArrayElement(LocalPoint);
-}
-
 function getRandomLocalAuthorizationError() {
   return getRandomArrayElement(AuthorizationError);
 }
-
 function getRandomLocalNotFoundError() {
   return getRandomArrayElement(NotFoundError);
 }
@@ -207,8 +139,6 @@ function getRandomLocalNotFoundError() {
 
 export {getRandomDestination};
 export {getRandomOffers};
-export {getRandomOffersByType};
 export {getRandomPoint};
-export {getRandomLocalPoint};
 export {getRandomLocalAuthorizationError};
 export {getRandomLocalNotFoundError};
