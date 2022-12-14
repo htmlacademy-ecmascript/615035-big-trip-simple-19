@@ -19,7 +19,24 @@ boardPresenter.init();
 Point.forEach((el) => {
   el.offers.forEach((element) => {
     let pointOffer = mockOffers.find((offer) => offer.id === element);
-    console.log(pointOffer);
   })
-  console.log('_____________________________________________________________________');
 });
+
+Point.forEach((dot) => {
+  dot.offers.forEach((offer)=>{
+    let c = mockOffers.filter(function (currentValue) {
+      return currentValue.id === offer;
+    })
+  })
+})
+
+let gettingIdOffer = (arrey) => {
+  let c ;
+  arrey.forEach((element) => c = element.offers)
+return c
+}
+
+let gettingObjectOffer = () => {
+
+}
+console.log(gettingIdOffer(Point))
